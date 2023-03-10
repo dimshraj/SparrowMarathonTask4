@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     @objc
     func shuffle() {
         self.items.shuffle()
-        self.tableView.reloadData()
+        self.tableView.reloadRows(at: items.map{IndexPath(row: $0.number, section: 0)}, with: .bottom)
     }
 }
 
